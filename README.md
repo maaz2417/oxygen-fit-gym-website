@@ -1,86 +1,47 @@
-# 🏋️ Oxygen Fit Gym - Website
+# 🏋️ Oxygen Fitness Club - Official Website
 
-A modern, responsive, and high-performance website built for **Oxygen Fit Gym**.
+A modern, responsive, and high-performance website built for **Oxygen Fitness Club**.
 
 ---
 
 ## 🌟 Key Features
 
-1. **Gym Timings & Schedule**:
-   - Live **"OPEN NOW / CLOSED"** status indicator that updates dynamically according to your actual operating hours.
+1. **Brand Identity**:
+   - Updated to **Oxygen Fitness Club**.
+   - Custom SVG logo and dark athletic theme with neon green & cyan accents.
+
+2. **Official Facebook & WhatsApp Integration**:
+   - Official Facebook Page linked: [https://www.facebook.com/p/Oxygen-Fitness-Club-100063996191995/](https://www.facebook.com/p/Oxygen-Fitness-Club-100063996191995/)
+   - Prominent WhatsApp quick action buttons in navbar, hero, admissions, and a floating WhatsApp bubble on mobile & desktop.
+
+3. **No Payment / Pricing Subscriptions**:
+   - All daily, monthly, 3-month, and annual pricing tiers have been removed.
+   - Replaced by a clean **"How To Join / Admissions"** section guiding visitors to contact on WhatsApp, Facebook, or walk into the gym.
+
+4. **Operating Timings**:
+   - Evening / Night workout sessions (04:30 PM – 12:00 AM).
+   - Live **"OPEN NOW / CLOSED"** status indicator calculating current gym availability in real-time.
    - Highlights today's schedule row automatically.
-   - Peak vs. Quiet hours traffic tracker.
-   - Special / Dedicated slot highlights (e.g. Ladies or private batches).
 
-2. **Certified Instructors & Trainers**:
-   - Trainer cards featuring specialties (Strength, Fat Loss, CrossFit, Rehab/Mobility).
-   - Direct "Book Consultation" action buttons that trigger the free trial pass modal.
-   - Instagram and Facebook profile links for each trainer.
-
-3. **Facility & Amenities Showcase**:
-   - Highlights free weights, cardio deck, functional/CrossFit turf, steam & sauna, InBody scans, and protein shake bar.
-
-4. **Membership Plans & Pricing**:
-   - 1-Day Pass, 1-Month Standard, 3-Month Pro (Most Popular), and Annual VIP tiers.
-
-5. **Location, Contact & Social Links**:
-   - Embedded Google Maps with one-click directions.
-   - Direct click-to-call phone links.
-   - Quick WhatsApp chat integration (including a floating WhatsApp action bubble).
-   - Instagram, Facebook, and YouTube social link cards.
-   - Interactive message and inquiry form with instant confirmation toast.
+5. **Facilities & Equipment**:
+   - Heavy free weights, isolation machines, cardio deck, mass building, and fat loss support.
 
 6. **Interactive Gym Photo Tester & Gallery**:
-   - You can test your gym's photos directly in the browser by dragging and dropping them into the test banner!
-   - Built-in slots ready for your actual gym pictures.
+   - Drag and drop or browse to preview your gym's photos live on the page.
 
 ---
 
 ## 📸 How to Add Your Gym's Real Pictures
 
-Whenever you are ready to put your real gym photos in:
-
-### Method 1: Save the file in the images folder (Recommended)
-1. Copy your gym photo into `assets/images/` and name it `gym-hero.jpg`.
-2. In `index.html` (around Line 95), change the `src` attribute of the hero image to:
-   ```html
-   <img id="mainGymHeroImg" src="assets/images/gym-hero.jpg" alt="Oxygen Fit Gym">
-   ```
-
-### Method 2: Test live in browser right now!
-- Open the website in your browser.
-- Scroll to the **"Inside Oxygen Fit"** section.
-- Click the dashed banner or drag and drop any picture from your computer to preview how it looks live on the page!
+Whenever you have your gym's photos ready:
+1. Save your gym picture in [`assets/images/gym-hero.jpg`](file:///home/maaz/Documents/Github/oxygen-fit-gym-website/assets/images/).
+2. In [`index.html`](file:///home/maaz/Documents/Github/oxygen-fit-gym-website/index.html#L95), make sure the `src` is set to `assets/images/gym-hero.jpg`.
+3. You can also test any image right away by opening the website and dragging your picture into the dashed upload banner in the **Gallery** section!
 
 ---
 
-## ✏️ How to Customize Your Details
+## ✏️ How to Customize Phone Numbers & WhatsApp
 
-All details are clearly organized in [index.html](file:///home/maaz/Documents/Github/oxygen-fit-gym-website/index.html):
-
-| Item | Where to update in `index.html` |
-|---|---|
-| **Phone Number** | Search for `+1 (234) 567-8900` and replace with your phone number |
-| **WhatsApp Link** | Search for `https://wa.me/12345678900` and put your WhatsApp number with country code (e.g. `923001234567`) |
-| **Instagram Link** | Search for `@oxygenfitgym` and change the URL to your Instagram profile |
-| **Facebook Link** | Search for `Oxygen Fit Gym` in the social links section |
-| **Gym Address** | Search for `124 Main Boulevard` and replace with your real location |
-| **Operating Hours** | Update the schedule list in the `#timings` section |
-
-To adjust the **Live Open/Closed time calculations**, edit the opening and closing hours in [js/main.js](file:///home/maaz/Documents/Github/oxygen-fit-gym-website/js/main.js#L18-L26).
-
----
-
-## 🚀 How to View the Website Locally
-
-You can simply double-click [index.html](file:///home/maaz/Documents/Github/oxygen-fit-gym-website/index.html) in your file manager to open it in any browser!
-
-Or run a lightweight local server:
-```bash
-# Using Python
-python3 -m http.server 8000
-
-# Using Node / npx
-npx serve .
-```
-Then visit `http://localhost:8000` in your browser.
+In [`index.html`](file:///home/maaz/Documents/Github/oxygen-fit-gym-website/index.html):
+- Search for `https://wa.me/923000000000` and replace `923000000000` with your gym's exact WhatsApp phone number with country code.
+- Search for `+92 (300) 000-0000` to update the displayed phone number.

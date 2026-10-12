@@ -1,5 +1,5 @@
 /**
- * OXYGEN FIT GYM - MAIN INTERACTIVE LOGIC
+ * OXYGEN FITNESS CLUB - MAIN INTERACTIVE LOGIC
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,16 +20,17 @@ function initLiveGymStatus() {
   const statusTitle = document.getElementById('liveStatusTitle');
   const statusSubtitle = document.getElementById('liveStatusSubtitle');
   
-  // Gym Operating Schedule (24-hour clock)
+  // Operating Schedule for Oxygen Fitness Club (24-hour clock)
   // Day 0: Sunday, 1: Monday, ... 6: Saturday
+  // Standard operating hours: 4:30 PM (16.5) to 12:00 AM (24.0)
   const schedule = {
-    0: { dayName: 'Sunday', open: 8, close: 20, openStr: '8:00 AM', closeStr: '8:00 PM' },
-    1: { dayName: 'Monday', open: 6, close: 23, openStr: '6:00 AM', closeStr: '11:00 PM' },
-    2: { dayName: 'Tuesday', open: 6, close: 23, openStr: '6:00 AM', closeStr: '11:00 PM' },
-    3: { dayName: 'Wednesday', open: 6, close: 23, openStr: '6:00 AM', closeStr: '11:00 PM' },
-    4: { dayName: 'Thursday', open: 6, close: 23, openStr: '6:00 AM', closeStr: '11:00 PM' },
-    5: { dayName: 'Friday', open: 6, close: 23, openStr: '6:00 AM', closeStr: '11:00 PM' },
-    6: { dayName: 'Saturday', open: 7, close: 22, openStr: '7:00 AM', closeStr: '10:00 PM' }
+    0: { dayName: 'Sunday', open: 16.5, close: 24, openStr: '04:30 PM', closeStr: '12:00 AM' },
+    1: { dayName: 'Monday', open: 16.5, close: 24, openStr: '04:30 PM', closeStr: '12:00 AM' },
+    2: { dayName: 'Tuesday', open: 16.5, close: 24, openStr: '04:30 PM', closeStr: '12:00 AM' },
+    3: { dayName: 'Wednesday', open: 16.5, close: 24, openStr: '04:30 PM', closeStr: '12:00 AM' },
+    4: { dayName: 'Thursday', open: 16.5, close: 24, openStr: '04:30 PM', closeStr: '12:00 AM' },
+    5: { dayName: 'Friday', open: 16.5, close: 24, openStr: '04:30 PM', closeStr: '12:00 AM' },
+    6: { dayName: 'Saturday', open: 16.5, close: 24, openStr: '04:30 PM', closeStr: '12:00 AM' }
   };
 
   const now = new Date();
@@ -43,7 +44,7 @@ function initLiveGymStatus() {
     if (isOpen) {
       statusIndicator.classList.remove('closed');
       statusTitle.innerHTML = 'OPEN NOW <i class="fa-solid fa-circle-check" style="color: var(--accent-primary); font-size: 13px;"></i>';
-      statusSubtitle.textContent = `Today: ${todaySchedule.openStr} – ${todaySchedule.closeStr} (Closes at ${todaySchedule.closeStr})`;
+      statusSubtitle.textContent = `Today: ${todaySchedule.openStr} – ${todaySchedule.closeStr} (Night session active)`;
     } else {
       statusIndicator.classList.add('closed');
       statusTitle.innerHTML = 'CLOSED NOW <i class="fa-solid fa-clock" style="color: var(--status-closed); font-size: 13px;"></i>';
@@ -156,7 +157,7 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   4. MODAL DIALOG (FREE PASS & TRIAL)
+   4. MODAL DIALOG (ADMISSION INQUIRY)
    ========================================================================== */
 function initModalHandling() {
   const modal = document.getElementById('passModal');
@@ -207,21 +208,21 @@ function initTrainerBooking() {
 
   trainerButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const trainerName = btn.dataset.trainer || 'Personal Trainer';
+      const trainerName = btn.dataset.trainer || 'Instructor';
       if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
         if (modalGoalSelect) {
           modalGoalSelect.value = 'Personal Training';
         }
-        showToast(`Selected coach: ${trainerName}. Complete your free pass to connect!`);
+        showToast(`Selected coach: ${trainerName}. Send your details to connect!`);
       }
     });
   });
 }
 
 /* ==========================================================================
-   6. CONTACT & PASS FORMS
+   6. CONTACT & ADMISSION FORMS
    ========================================================================== */
 function initContactForms() {
   const mainContactForm = document.getElementById('mainContactForm');
@@ -230,10 +231,9 @@ function initContactForms() {
   if (mainContactForm) {
     mainContactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('contactName')?.value || 'Fitness Enthusiast';
-      const phone = document.getElementById('contactPhone')?.value || '';
+      const name = document.getElementById('contactName')?.value || 'Guest';
       
-      showToast(`Thank you, ${name}! We've received your request and will call/WhatsApp you shortly.`);
+      showToast(`Thank you, ${name}! Your admission message was received. We'll reply via WhatsApp / phone shortly.`);
       mainContactForm.reset();
     });
   }
@@ -241,7 +241,7 @@ function initContactForms() {
   if (modalPassForm) {
     modalPassForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('modalName')?.value || 'Valued Guest';
+      const name = document.getElementById('modalName')?.value || 'Valued Member';
       
       const modal = document.getElementById('passModal');
       if (modal) {
@@ -249,7 +249,7 @@ function initContactForms() {
         document.body.style.overflow = '';
       }
 
-      showToast(`🎉 Congratulations ${name}! Your 1-Day Free Pass has been reserved! Show this confirmation at the front desk.`);
+      showToast(`🎉 Thank you, ${name}! Your admission inquiry has been received. Our team will contact you shortly.`);
       modalPassForm.reset();
     });
   }
@@ -345,4 +345,3 @@ function showToast(message) {
     toast.classList.remove('show');
   }, 4500);
 }
-

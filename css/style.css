@@ -1096,134 +1096,137 @@ button, input, textarea, select {
 }
 
 /* ==========================================================================
-   MEMBERSHIP PRICING
+   ADMISSIONS & HOW TO JOIN SECTION (NO PAYMENT / PRICING TIERS)
    ========================================================================== */
-.pricing-section {
+.admission-section {
   background: var(--bg-surface);
+  position: relative;
 }
 
-.pricing-grid {
+.admission-steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  align-items: stretch;
+  gap: 24px;
+  margin-bottom: 48px;
 }
 
-.pricing-card {
+.admission-step-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  padding: 38px 30px;
-  display: flex;
-  flex-direction: column;
+  padding: 32px 26px;
   position: relative;
   transition: var(--transition);
 }
 
-.pricing-card:hover {
-  transform: translateY(-8px);
+.admission-step-card:hover {
+  transform: translateY(-6px);
   border-color: var(--border-glow);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
-.pricing-card.popular {
-  border: 2px solid var(--accent-primary);
-  background: linear-gradient(160deg, #182438 0%, #111A2B 100%);
-  box-shadow: 0 10px 30px rgba(0, 245, 155, 0.15);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--accent-gradient);
-  color: #050B14;
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 6px 18px;
-  border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px rgba(0, 245, 155, 0.4);
-}
-
-.plan-header {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.plan-name {
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.plan-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
-.plan-price {
-  margin: 18px 0;
-  display: flex;
-  align-items: baseline;
-  gap: 4px;
-}
-
-.price-currency {
-  font-size: 24px;
-  font-weight: 800;
+.step-num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(0, 245, 155, 0.12);
+  border: 1px solid var(--accent-primary);
   color: var(--accent-primary);
-}
-
-.price-amount {
   font-family: var(--font-heading);
-  font-size: 48px;
   font-weight: 900;
-  line-height: 1;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.price-period {
-  color: var(--text-muted);
+.admission-step-card h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.admission-step-card p {
+  color: var(--text-secondary);
   font-size: 14px;
-  font-weight: 600;
+  line-height: 1.6;
 }
 
-.plan-features {
+/* Big Admission CTA Card */
+.admission-banner-card {
+  background: linear-gradient(135deg, #152238 0%, #0d1626 100%);
+  border: 1px solid rgba(0, 245, 155, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 44px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.admission-banner-content h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.admission-banner-content p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  max-width: 620px;
+  line-height: 1.6;
+}
+
+.admission-banner-actions {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-bottom: 32px;
-  flex-grow: 1;
+  flex-shrink: 0;
 }
 
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 14px;
-  color: var(--text-secondary);
+.btn-whatsapp {
+  background: #25D366;
+  color: #FFFFFF;
+  font-weight: 800;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
 }
 
-.feature-item i {
-  color: var(--accent-primary);
-  font-size: 14px;
+.btn-whatsapp:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+  color: #FFFFFF;
 }
 
-.feature-item.disabled {
-  color: var(--text-muted);
-  text-decoration: line-through;
+.btn-facebook {
+  background: #1877F2;
+  color: #FFFFFF;
+  font-weight: 800;
+  box-shadow: 0 4px 18px rgba(24, 119, 242, 0.35);
 }
 
-.feature-item.disabled i {
-  color: var(--text-muted);
+.btn-facebook:hover {
+  background: #1565d8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(24, 119, 242, 0.5);
+  color: #FFFFFF;
 }
 
-.pricing-card .btn {
-  width: 100%;
+@media (max-width: 900px) {
+  .admission-banner-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .admission-banner-actions {
+    width: 100%;
+  }
+  .admission-banner-actions .btn {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
