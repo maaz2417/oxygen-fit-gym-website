@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oxygen Fit Gym | Premium Fitness Club, Timings &amp; Personal Training</title>
+  <meta name="description" content="Welcome to Oxygen Fit Gym. Experience world-class strength training, cardio, certified instructors, flexible timings, and modern facilities. Claim your free day pass today!">
+  <meta name="keywords" content="gym, fitness club, oxygen fit, personal trainer, gym timings, gym membership, workout, weight loss, strength training">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts: Syne (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Oxygen Fit Home">
+        <img src="assets/images/logo.svg" alt="Oxygen Fit Gym Logo">
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#timings" class="nav-link">Timings</a>
+        <a href="#facilities" class="nav-link">Facilities</a>
+        <a href="#trainers" class="nav-link">Trainers</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#pricing" class="nav-link">Plans</a>
+        <a href="#contact" class="nav-link">Location &amp; Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Quick Call Link (Customize your number) -->
+        <a href="tel:+12345678900" class="nav-phone" title="Call Oxygen Fit">
+          <i class="fa-solid fa-phone"></i>
+          <span>+1 (234) 567-8900</span>
+        </a>
+        
+        <button class="btn btn-primary btn-sm" data-open-modal>
+          <i class="fa-solid fa-ticket"></i> Free Day Pass
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero" id="home">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <div class="container hero-grid">
+      <!-- Left Column: Copy & Actions -->
+      <div class="hero-content">
+        <div class="hero-badge-wrap">
+          <span class="badge-pulse"></span>
+          <span>Premium Fitness &amp; Strength Hub</span>
+        </div>
+
+        <h1 class="hero-title">
+          BREATHE POWER. <br>
+          <span class="gradient-text">ELEVATE FITNESS.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Oxygen Fit is engineered for real transformations. Train with Olympic-grade equipment, elite personal coaches, and an electric atmosphere designed to push your limits.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" data-open-modal>
+            <i class="fa-solid fa-bolt"></i> Claim Free Day Pass
+          </button>
+          <a href="#timings" class="btn btn-secondary btn-lg">
+            <i class="fa-regular fa-clock"></i> View Gym Timings
+          </a>
+        </div>
+
+        <!-- Hero Stats Counters -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>Certified Trainers</p>
+          </div>
+          <div class="stat-item">
+            <h3>60+</h3>
+            <p>Modern Machines</p>
+          </div>
+          <div class="stat-item">
+            <h3>7 Days</h3>
+            <p>Open All Week</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Hero Gym Picture Showcase -->
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-img-wrap">
+            <!-- 
+              ============================================================
+              NOTE FOR USER: 
+              To change this hero photo with your real gym photo:
+              1. Save your photo into 'assets/images/gym-hero.jpg'
+              2. Or replace the 'src' below with your image URL or path!
+              ============================================================
+            -->
+            <img 
+              id="mainGymHeroImg" 
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" 
+              onerror="this.onerror=null; this.src='assets/images/gym-placeholder.svg';" 
+              alt="Oxygen Fit Gym Main Workout Floor"
+            >
+            
+            <div class="hero-img-overlay">
+              <span class="photo-badge">
+                <i class="fa-solid fa-camera"></i> Oxygen Fit Arena
+              </span>
+            </div>
+          </div>
+
+          <!-- Dynamic Live Open/Closed Status Widget -->
+          <div class="floating-status-pill">
+            <div class="status-info">
+              <div class="live-indicator" id="liveStatusDot"></div>
+              <div class="status-text">
+                <h4 id="liveStatusTitle">CHECKING STATUS...</h4>
+                <p id="liveStatusSubtitle">Calculating operating hours...</p>
+              </div>
+            </div>
+            <a href="#timings" class="btn btn-outline btn-sm">Full Schedule</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TIMINGS & SCHEDULE SECTION
+       ========================================================================== -->
+  <section class="section timings-section" id="timings">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-clock"></i> Hours &amp; Schedule</span>
+        <h2 class="section-title">Built Around Your <span class="gradient-text">Daily Routine</span></h2>
+        <p class="section-subtitle">
+          Whether you are an early bird crushing dawn PRs or a night owl working out after hours, Oxygen Fit is open 7 days a week.
+        </p>
+      </div>
+
+      <div class="timings-grid">
+        <!-- Left Column: Operating Days & Hours -->
+        <div class="schedule-card">
+          <div class="schedule-card-header">
+            <h3><i class="fa-solid fa-calendar-days"></i> Operating Hours</h3>
+            <span class="today-tag" style="background: rgba(0, 245, 155, 0.2); color: var(--accent-primary); border: 1px solid var(--accent-primary);">Live System</span>
+          </div>
+
+          <div class="schedule-list">
+            <!-- Mon - Fri (Day codes 1, 2, 3, 4, 5) -->
+            <div class="schedule-row" data-day="1,2,3,4,5">
+              <div class="day-badge">
+                <i class="fa-solid fa-dumbbell" style="color: var(--accent-primary);"></i>
+                <span>Monday – Friday</span>
+              </div>
+              <div class="time-slot">06:00 AM – 11:00 PM</div>
+            </div>
+
+            <!-- Saturday (Day code 6) -->
+            <div class="schedule-row" data-day="6">
+              <div class="day-badge">
+                <i class="fa-solid fa-bolt" style="color: var(--accent-secondary);"></i>
+                <span>Saturday</span>
+              </div>
+              <div class="time-slot">07:00 AM – 10:00 PM</div>
+            </div>
+
+            <!-- Sunday (Day code 0) -->
+            <div class="schedule-row" data-day="0">
+              <div class="day-badge">
+                <i class="fa-solid fa-fire" style="color: #FF6B00;"></i>
+                <span>Sunday</span>
+              </div>
+              <div class="time-slot">08:00 AM – 08:00 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Special Slots & Traffic Insight -->
+        <div class="timings-side">
+          <!-- Ladies or Dedicated Slot Card (Customizable) -->
+          <div class="special-timing-card">
+            <span class="special-badge">
+              <i class="fa-solid fa-star"></i> Dedicated Slot Available
+            </span>
+            <h4>Ladies &amp; Private Conditioning Hours</h4>
+            <p>
+              Looking for female-only workout hours or personalized trainer sessions? We offer dedicated exclusive batches led by certified female instructors.
+            </p>
+            <div class="slot-details">
+              <i class="fa-solid fa-users-rays"></i>
+              <span>Daily Dedicated Slot: 11:00 AM – 02:00 PM</span>
+            </div>
+          </div>
+
+          <!-- Peak vs Quiet Hours Tracker -->
+          <div class="peak-hours-card">
+            <h4><i class="fa-solid fa-chart-simple" style="color: var(--accent-primary);"></i> Gym Crowd Meter</h4>
+            <div class="peak-bar-group">
+              <div class="peak-bar-item">
+                <span class="label">06:00 - 09:00 AM</span>
+                <div class="bar-bg"><div class="bar-fill bar-low"></div></div>
+                <span class="traffic-tag low">Quiet</span>
+              </div>
+              <div class="peak-bar-item">
+                <span class="label">10:00 - 04:00 PM</span>
+                <div class="bar-bg"><div class="bar-fill bar-med"></div></div>
+                <span class="traffic-tag med">Moderate</span>
+              </div>
+              <div class="peak-bar-item">
+                <span class="label">05:00 - 08:30 PM</span>
+                <div class="bar-bg"><div class="bar-fill bar-high"></div></div>
+                <span class="traffic-tag high">Peak Rush</span>
+              </div>
+              <div class="peak-bar-item">
+                <span class="label">09:00 - 11:00 PM</span>
+                <div class="bar-bg"><div class="bar-fill bar-med"></div></div>
+                <span class="traffic-tag med">Moderate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GYM FACILITIES & WHAT WE OFFER
+       ========================================================================== -->
+  <section class="section" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Facilities &amp; Amenities</span>
+        <h2 class="section-title">Everything You Need To <span class="gradient-text">Excel</span></h2>
+        <p class="section-subtitle">
+          Designed from the ground up for serious athletes, beginners, and fitness lovers.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <h3>Heavy Free Weights &amp; Power Racks</h3>
+          <p>
+            Olympic barbells, custom rubberized dumbbells up to 50kg, calibrated plates, squat cages, and deadlift platforms.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-person-running"></i>
+          </div>
+          <h3>High-Performance Cardio Zone</h3>
+          <p>
+            Commercial-grade treadmills, stairmasters, air-bikes, SkiErgs, and rowing machines with individual heart-rate telemetry.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>CrossFit &amp; Functional Turf</h3>
+          <p>
+            High-density sprint turf, battle ropes, plyo boxes, sled pushes, kettlebells, and gymnastic pull-up rigs.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-hot-tub-person"></i>
+          </div>
+          <h3>Steam, Sauna &amp; Luxury Showers</h3>
+          <p>
+            Post-workout recovery made easy with eucalyptus steam baths, hygienic private locker rooms, and rain showers.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3>InBody Body Composition Scan</h3>
+          <p>
+            Medical-grade segment muscle &amp; body-fat analysis to accurately track your physical transformation each month.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-bottle-water"></i>
+          </div>
+          <h3>Nutrition &amp; Protein Shake Bar</h3>
+          <p>
+            Fresh pre-workout energy drinks, whey isolate smoothies, BCAAs, clean meal preps, and healthy protein bars on-site.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GYM INSTRUCTORS / COACHES SECTION
+       ========================================================================== -->
+  <section class="section trainers-section" id="trainers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-user-ninja"></i> Expert Coaches</span>
+        <h2 class="section-title">Train With <span class="gradient-text">Certified Champions</span></h2>
+        <p class="section-subtitle">
+          Our certified coaches create tailored nutrition and workout programs to get you results without guesswork.
+        </p>
+      </div>
+
+      <div class="trainers-grid">
+        <!-- Trainer 1 -->
+        <div class="trainer-card">
+          <div class="trainer-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop" 
+              alt="Coach Alex Rivera - Head Strength Coach"
+            >
+            <div class="trainer-overlay">
+              <div class="trainer-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Alex on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Alex on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-specialty">Head Strength Coach</span>
+            <h3 class="trainer-name">Alex Rivera</h3>
+            <p class="trainer-bio">
+              10+ years specializing in hypertrophy, competitive powerlifting, and progressive athletic strength conditioning.
+            </p>
+            <div class="trainer-tags">
+              <span class="trainer-tag">CSCS Certified</span>
+              <span class="trainer-tag">Powerlifting</span>
+              <span class="trainer-tag">Hypertrophy</span>
+            </div>
+            <button class="btn btn-outline btn-sm book-trainer-btn" data-trainer="Alex Rivera">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="trainer-card">
+          <div class="trainer-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=800&auto=format&fit=crop" 
+              alt="Coach Sarah Vance - Female Fitness & Nutrition Specialist"
+            >
+            <div class="trainer-overlay">
+              <div class="trainer-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Sarah on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Sarah on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-specialty">Female Fitness &amp; Nutrition</span>
+            <h3 class="trainer-name">Sarah Vance</h3>
+            <p class="trainer-bio">
+              Specialist in sustainable body fat loss, glute development, metabolic conditioning, and tailored dietary planning.
+            </p>
+            <div class="trainer-tags">
+              <span class="trainer-tag">ACE Certified</span>
+              <span class="trainer-tag">Sports Nutrition</span>
+              <span class="trainer-tag">HIIT</span>
+            </div>
+            <button class="btn btn-outline btn-sm book-trainer-btn" data-trainer="Sarah Vance">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="trainer-card">
+          <div class="trainer-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop" 
+              alt="Coach Marcus Thorne - CrossFit & Functional Master"
+            >
+            <div class="trainer-overlay">
+              <div class="trainer-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Marcus on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Marcus on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-specialty">CrossFit &amp; Conditioning</span>
+            <h3 class="trainer-name">Marcus Thorne</h3>
+            <p class="trainer-bio">
+              Former collegiate athlete specializing in explosive power, calisthenics, functional mobility, and stamina.
+            </p>
+            <div class="trainer-tags">
+              <span class="trainer-tag">CrossFit-L2</span>
+              <span class="trainer-tag">Mobility</span>
+              <span class="trainer-tag">Endurance</span>
+            </div>
+            <button class="btn btn-outline btn-sm book-trainer-btn" data-trainer="Marcus Thorne">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+
+        <!-- Trainer 4 -->
+        <div class="trainer-card">
+          <div class="trainer-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" 
+              alt="Coach Maya Lin - Yoga, Mobility & Posture Rehab"
+            >
+            <div class="trainer-overlay">
+              <div class="trainer-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Maya on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="trainer-social-btn" title="Maya on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-specialty">Mobility &amp; Posture Rehab</span>
+            <h3 class="trainer-name">Maya Lin</h3>
+            <p class="trainer-bio">
+              Focused on joint longevity, injury prevention, core stability, and deep myofascial mobility restoration.
+            </p>
+            <div class="trainer-tags">
+              <span class="trainer-tag">RYT-500</span>
+              <span class="trainer-tag">Joint Rehab</span>
+              <span class="trainer-tag">Core Stability</span>
+            </div>
+            <button class="btn btn-outline btn-sm book-trainer-btn" data-trainer="Maya Lin">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PHOTO GALLERY & LIVE USER PHOTO UPLOADER
+       ========================================================================== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-images"></i> Visual Tour</span>
+        <h2 class="section-title">Inside <span class="gradient-text">Oxygen Fit</span></h2>
+        <p class="section-subtitle">
+          Take a look around our clean, modern, and high-energy workout floor.
+        </p>
+      </div>
+
+      <!-- 
+        Interactive Live Photo Tester:
+        The gym owner can click this or drag & drop their real gym photos 
+        to immediately see how it looks on the website!
+      -->
+      <div class="photo-uploader-banner" id="photoUploaderTrigger" title="Click to test your gym photo">
+        <input type="file" id="gymPhotoFileInput" accept="image/*" style="display: none;">
+        <div class="uploader-content">
+          <div class="uploader-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+          <h4>Have Your Gym Pictures Ready?</h4>
+          <p>
+            Click here or drag &amp; drop your gym's photo to preview it live on this page! (Or simply place your file in <code style="color: var(--accent-primary);">assets/images/gym-hero.jpg</code>)
+          </p>
+          <span class="btn btn-outline btn-sm">
+            <i class="fa-solid fa-upload"></i> Click To Choose Image
+          </span>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img 
+            id="galleryPreviewImg1"
+            src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" 
+            alt="Oxygen Fit Free Weights Floor"
+          >
+          <div class="gallery-overlay">
+            <span>Free Weight Arena</span>
+            <small>Olympic benches &amp; heavy dumbbells</small>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img 
+            src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" 
+            alt="Oxygen Fit Functional Arena"
+          >
+          <div class="gallery-overlay">
+            <span>Functional &amp; Turf Zone</span>
+            <small>Kettlebells &amp; battle ropes</small>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img 
+            src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=800&auto=format&fit=crop" 
+            alt="Oxygen Fit Cardio Zone"
+          >
+          <div class="gallery-overlay">
+            <span>Cardio Suite</span>
+            <small>Treadmills &amp; assault bikes</small>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img 
+            src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" 
+            alt="Oxygen Fit Training in Action"
+          >
+          <div class="gallery-overlay">
+            <span>Personal Coaching</span>
+            <small>1-on-1 personalized technique</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MEMBERSHIP PLANS & PRICING
+       ========================================================================== -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-tag"></i> Flexible Membership</span>
+        <h2 class="section-title">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+        <p class="section-subtitle">
+          No hidden sign-up charges. Zero cancellation penalties. Choose the plan that fits your lifestyle.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1: Day Pass -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <h3 class="plan-name">Day Pass</h3>
+            <p class="plan-desc">Perfect for visitors, travelers, or testing the waters.</p>
+            <div class="plan-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">10</span>
+              <span class="price-period">/ single visit</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Full access to gym floor</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Cardio &amp; weight area</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Locker &amp; shower use</div>
+            <div class="feature-item disabled"><i class="fa-solid fa-xmark"></i> Free fitness assessment</div>
+            <div class="feature-item disabled"><i class="fa-solid fa-xmark"></i> Steam &amp; sauna pass</div>
+          </div>
+          <button class="btn btn-secondary" data-open-modal>Get Day Pass</button>
+        </div>
+
+        <!-- Plan 2: 1 Month Standard -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <h3 class="plan-name">Monthly Standard</h3>
+            <p class="plan-desc">Month-to-month commitment with complete gym access.</p>
+            <div class="plan-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">45</span>
+              <span class="price-period">/ month</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Unlimited 7-day gym access</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> 1 InBody composition scan</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Locker room &amp; shower</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> General trainer guidance</div>
+            <div class="feature-item disabled"><i class="fa-solid fa-xmark"></i> Unlimited Steam &amp; Sauna</div>
+          </div>
+          <button class="btn btn-secondary" data-open-modal>Join Monthly</button>
+        </div>
+
+        <!-- Plan 3: 3 Months Pro (Most Popular) -->
+        <div class="pricing-card popular">
+          <span class="popular-badge">Most Popular</span>
+          <div class="plan-header">
+            <h3 class="plan-name">3 Months Pro</h3>
+            <p class="plan-desc">Our best-value package for dedicated transformations.</p>
+            <div class="plan-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">115</span>
+              <span class="price-period">/ 3 months</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <div class="feature-item"><i class="fa-solid fa-check"></i> All Standard features included</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> 1 Free Personal Training session</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Full Steam &amp; Sauna access</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Monthly InBody progress review</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> 10% Off Protein Shake Bar</div>
+          </div>
+          <button class="btn btn-primary" data-open-modal>Join 3-Month Pro</button>
+        </div>
+
+        <!-- Plan 4: 1 Year VIP -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <h3 class="plan-name">Annual VIP</h3>
+            <p class="plan-desc">Maximum savings and VIP amenities all year round.</p>
+            <div class="plan-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">380</span>
+              <span class="price-period">/ full year</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <div class="feature-item"><i class="fa-solid fa-check"></i> All Pro features included</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> 3 Free Personal Training sessions</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Free Oxygen Fit Gym Apparel kit</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> Freeze membership up to 30 days</div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> 2 Free Guest passes per month</div>
+          </div>
+          <button class="btn btn-secondary" data-open-modal>Join Annual VIP</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LOCATION, CONTACT & SOCIALS SECTION
+       ========================================================================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-location-dot"></i> Visit &amp; Connect</span>
+        <h2 class="section-title">Where To Find Us &amp; <span class="gradient-text">Contact</span></h2>
+        <p class="section-subtitle">
+          Have questions or want to check out the facility in person? Reach out through any channel below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Column: Contact Cards & Socials -->
+        <div class="contact-info-wrap">
+          <!-- Location Address Card -->
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="info-content">
+              <h4>Gym Location</h4>
+              <!-- You can easily edit your address here -->
+              <p>
+                Oxygen Fit Gym, 124 Main Boulevard,<br>
+                Fitness City, Commercial Area (Near Central Plaza)
+              </p>
+              <p style="margin-top: 8px;">
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 700;">
+                  <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Phone & WhatsApp Card -->
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="info-content">
+              <h4>Direct Call &amp; WhatsApp</h4>
+              <p>
+                Call us: <a href="tel:+12345678900">+1 (234) 567-8900</a><br>
+                WhatsApp: <a href="https://wa.me/12345678900" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 700;">+1 (234) 567-8900 (Click to chat)</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h4>Email Inquiries</h4>
+              <p>
+                <a href="mailto:contact@oxygenfitgym.com">contact@oxygenfitgym.com</a><br>
+                <a href="mailto:membership@oxygenfitgym.com">membership@oxygenfitgym.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Social Links Panel (Instagram, Facebook, etc.) -->
+          <div class="social-links-panel">
+            <h4>Follow Our Community &amp; Updates</h4>
+            <div class="social-buttons-grid">
+              <!-- Instagram -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn-card insta">
+                <i class="fa-brands fa-instagram"></i>
+                <div>
+                  <div>Instagram</div>
+                  <small style="color: var(--text-muted); font-size: 11px;">@oxygenfitgym</small>
+                </div>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn-card fb">
+                <i class="fa-brands fa-facebook"></i>
+                <div>
+                  <div>Facebook</div>
+                  <small style="color: var(--text-muted); font-size: 11px;">Oxygen Fit Gym</small>
+                </div>
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/12345678900" target="_blank" rel="noopener noreferrer" class="social-btn-card wa">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                  <div>WhatsApp</div>
+                  <small style="color: var(--text-muted); font-size: 11px;">Instant Support</small>
+                </div>
+              </a>
+
+              <!-- YouTube -->
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn-card yt">
+                <i class="fa-brands fa-youtube"></i>
+                <div>
+                  <div>YouTube</div>
+                  <small style="color: var(--text-muted); font-size: 11px;">Workout Tips</small>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Send a Message Form -->
+        <div class="contact-form-card">
+          <h3>Send Us A Message</h3>
+          <p>Drop your details below and our team will get in touch with you within 30 minutes.</p>
+
+          <form id="mainContactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Full Name</label>
+                <input type="text" id="contactName" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="contactPhone" class="form-label">Phone Number / WhatsApp</label>
+                <input type="tel" id="contactPhone" class="form-control" placeholder="+1 (234) 000-0000" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">Email Address (Optional)</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="contactGoal" class="form-label">Your Fitness Goal</label>
+              <select id="contactGoal" class="form-control">
+                <option value="General Fitness">General Fitness &amp; Health</option>
+                <option value="Muscle Building">Muscle Building &amp; Hypertrophy</option>
+                <option value="Weight Loss">Weight / Fat Loss</option>
+                <option value="Personal Training">Personal 1-on-1 Training</option>
+                <option value="CrossFit">CrossFit &amp; Athletic Conditioning</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Your Message or Questions</label>
+              <textarea id="contactMessage" class="form-control" rows="4" placeholder="Tell us when you'd like to visit or ask anything..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Map Container -->
+      <div class="map-container">
+        <!-- Google Maps Embed Placeholder (Customize query with your actual location) -->
+        <iframe 
+          title="Oxygen Fit Gym Location Map"
+          src="https://maps.google.com/maps?q=gym&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+          loading="lazy" 
+          allowfullscreen>
+        </iframe>
+
+        <div class="map-floating-card">
+          <h4><i class="fa-solid fa-location-dot" style="color: var(--accent-primary);"></i> Oxygen Fit Gym</h4>
+          <p>Spacious parking available on-site for cars &amp; motorbikes.</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FREQUENTLY ASKED QUESTIONS (FAQ)
+       ========================================================================== -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Answers</span>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p class="section-subtitle">
+          Got questions before joining? Here is everything you need to know.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I try the gym before committing to a membership?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, absolutely! We offer a 100% Free 1-Day Trial Pass for newcomers so you can test all the machines, check the cleanliness of our showers and lockers, and experience the gym environment first-hand.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are the exact gym timings?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We are open Monday through Friday from 06:00 AM to 11:00 PM, Saturday from 07:00 AM to 10:00 PM, and Sunday from 08:00 AM to 08:00 PM. We also offer a dedicated slot from 11:00 AM to 02:00 PM daily.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are personal trainers included or an additional fee?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Our general floor trainers are always available to help correct your form, demonstrate equipment, and give tips. For dedicated 1-on-1 personalized transformation coaching and custom nutrition plans, we offer affordable private training packages.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What should I bring on my first day?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>All you need is comfortable athletic sportswear, clean athletic indoor shoes, a personal gym towel, and a water bottle. Lockers are provided free of charge (bring your own lock or rent one at the front desk).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <img src="assets/images/logo.svg" alt="Oxygen Fit Gym Logo" style="height: 48px;">
+          <p>
+            Oxygen Fit is your ultimate sanctuary for strength, conditioning, and healthy living. Elevate your body and mind with world-class gear and coaching.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#timings">Gym Timings</a>
+            <a href="#facilities">Facilities &amp; Gear</a>
+            <a href="#trainers">Personal Coaches</a>
+            <a href="#pricing">Membership Plans</a>
+          </div>
+        </div>
+
+        <!-- Social & Support -->
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://wa.me/12345678900" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:+12345678900"><i class="fa-solid fa-phone"></i> +1 (234) 567-8900</a>
+          </div>
+        </div>
+
+        <!-- Timings Snapshot -->
+        <div class="footer-col">
+          <h4>Hours Snapshot</h4>
+          <div class="footer-hours-item">
+            <span>Mon – Fri:</span>
+            <span>6:00 AM – 11:00 PM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Saturday:</span>
+            <span>7:00 AM – 10:00 PM</span>
+          </div>
+          <div class="footer-hours-item">
+            <span>Sunday:</span>
+            <span>8:00 AM – 8:00 PM</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">
+            <i class="fa-solid fa-shield-halved" style="color: var(--accent-primary);"></i> Cleaned &amp; sanitized daily
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Oxygen Fit Gym. All rights reserved.</div>
+        <div>Crafted for champions. Push beyond your limits.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING WHATSAPP BUTTON (Always visible for fast member inquiries)
+       ========================================================================== -->
+  <a href="https://wa.me/12345678900?text=Hi%20Oxygen%20Fit%20Gym!%20I'd%20like%20to%20know%20more%20about%20memberships%20and%20timings." 
+     class="floating-whatsapp" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     title="Chat with Oxygen Fit on WhatsApp"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================================
+       MODAL DIALOG: CLAIM 1-DAY FREE PASS / BOOK CONSULTATION
+       ========================================================================== -->
+  <div class="modal-overlay" id="passModal">
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal aria-label="Close dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <span class="section-tag" style="margin-bottom: 12px;">
+        <i class="fa-solid fa-bolt"></i> 100% Free Trial
+      </span>
+      <h3 style="font-family: var(--font-heading); font-size: 24px; margin-bottom: 8px;">
+        Claim Your Free Day Pass
+      </h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 24px;">
+        Enter your details to receive an instant pass barcode. Show it at our reception for free full-facility access.
+      </p>
+
+      <form id="modalPassForm">
+        <div class="form-group">
+          <label for="modalName" class="form-label">Your Name</label>
+          <input type="text" id="modalName" class="form-control" placeholder="Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modalPhone" class="form-label">Phone / WhatsApp Number</label>
+          <input type="tel" id="modalPhone" class="form-control" placeholder="+1 (234) 567-8900" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modalGoalSelect" class="form-label">Primary Interest</label>
+          <select id="modalGoalSelect" class="form-control">
+            <option value="General Workout">General Workout / Gym Tour</option>
+            <option value="Personal Training">Personal Training Consultation</option>
+            <option value="Strength Training">Heavy Strength &amp; Weights</option>
+            <option value="Weight Loss">Cardio &amp; Fat Loss</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-solid fa-ticket"></i> Get My Free Pass Now
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="oxygenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F59B" />
+      <stop offset="100%" stop-color="#00D2FF" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Oxygen Symbol / Dumbbell Hybrid -->
+  <g transform="translate(10, 10)">
+    <!-- Oxygen 'O' Ring with dynamic slice -->
+    <circle cx="30" cy="30" r="26" fill="none" stroke="url(#oxygenGrad)" stroke-width="6" stroke-dasharray="140 25" stroke-linecap="round"/>
+    <!-- Dumbbell / Lightning Bolt Core -->
+    <path d="M 18 30 L 42 30" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+    <rect x="14" y="22" width="4" height="16" rx="2" fill="url(#oxygenGrad)"/>
+    <rect x="42" y="22" width="4" height="16" rx="2" fill="url(#oxygenGrad)"/>
+    <circle cx="30" cy="30" r="3" fill="#00F59B"/>
+  </g>
+  
+  <!-- Text Brand -->
+  <text x="82" y="44" font-family="'Syne', 'Oswald', sans-serif" font-weight="900" font-size="32" letter-spacing="2" fill="#FFFFFF">
+    OXYGEN<tspan fill="url(#oxygenGrad)">FIT</tspan>
+  </text>
+  <text x="84" y="62" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" letter-spacing="4.5" fill="#94A3B8">
+    GYM &amp; FITNESS CLUB
+  </text>
+</svg>
+
